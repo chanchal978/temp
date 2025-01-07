@@ -12,41 +12,54 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
         }
         header {
-            background: #333;
+            background: linear-gradient(135deg, #333, #555);
             color: #fff;
-            padding: 20px 0;
+            padding: 40px 20px;
             text-align: center;
+            animation: fadeInDown 1s;
         }
         nav {
             display: flex;
             justify-content: center;
-            background: #555;
+            background: #444;
             padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         nav a {
             color: #fff;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
+            transition: color 0.3s;
         }
         nav a:hover {
-            color: #ddd;
+            color: #ffd700;
         }
         section {
-            padding: 20px;
+            padding: 40px 20px;
             max-width: 1100px;
             margin: 0 auto;
         }
         h1, h2, h3 {
-            color: #333;
+            color: #222;
+            animation: fadeIn 1s;
         }
         .portfolio-item {
             border: 1px solid #ddd;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
         .portfolio-item h3 {
             margin-top: 0;
@@ -55,7 +68,8 @@
             background: #333;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 0;
+            animation: fadeInUp 1s;
         }
         .contact-form {
             display: flex;
@@ -63,20 +77,51 @@
         }
         .contact-form input, .contact-form textarea {
             margin: 10px 0;
-            padding: 10px;
+            padding: 15px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 16px;
         }
         .contact-form button {
-            padding: 10px;
-            background: #333;
+            padding: 15px;
+            background: linear-gradient(135deg, #333, #555);
             color: #fff;
             border: none;
             border-radius: 5px;
+            font-size: 16px;
             cursor: pointer;
+            transition: background 0.3s;
         }
         .contact-form button:hover {
-            background: #555;
+            background: linear-gradient(135deg, #555, #777);
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
